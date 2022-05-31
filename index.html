@@ -27,7 +27,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Emblem Helper</title><meta name="author" content="Flashback-GTA">
+	<title>徽记小助手 | 由 Flashback-GTA</title><meta name="author" content="Flashback-GTA">
 	<!-- CSS STYLES START -->
 	<style>
 		html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}nav ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
@@ -1011,7 +1011,7 @@
 			<!-- LEFT COLUMN START -->
 			<div class="column left">
 				<div class="column-content">
-					<button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">Import Image</button>
+					<button id="eh-btnImportImage" type="button" class="clr-primary btn-wide">导入图像</button>
 					<input type="file" id="eh-fileSelector" style="display: none;">
 					<div>
 						<fieldset style="border-color: #242424;">
@@ -1027,14 +1027,14 @@
 						<fieldset>
 							<legend>
 								<span class="info">🛈<span class="tooltip">
-									Determines the resolution of the source image. The initial size will be auto-selected when an image is loaded.<br>
+									确定源图像的分辨率。加载图像时，将自动选择初始大小。<br>
 									<br>
-									64 &nbsp; = &nbsp; 64 x 64 canvas<br>
-									128 &nbsp; = &nbsp; 128 x 128 canvas<br>
-									256 &nbsp; = &nbsp; 256 x 256 canvas<br>
-									512 &nbsp; = &nbsp; 512 x 512 canvas
+									64 &nbsp; = &nbsp; 64 x 64 画布<br>
+									128 &nbsp; = &nbsp; 128 x 128 画布<br>
+									256 &nbsp; = &nbsp; 256 x 256 画布<br>
+									512 &nbsp; = &nbsp; 512 x 512 画布
 								</span></span>
-								Source Image Resize
+								调整源图像大小
 							</legend>
 							<div>
 								<label for="eh-opt64" class="l-radio">
@@ -1058,57 +1058,57 @@
 						<fieldset>
 							<legend>
 								<span class="info">🛈<span class="tooltip">
-									Determines if smoothing is applied when resizing source images.<br>
+									确定在调整源图像大小时是否应用平滑。<br>
 									<br>
-									On &nbsp; = &nbsp; Smoother appearance &nbsp; (antialiasing)<br>
-									Off &nbsp; = &nbsp; Sharper / jagged appearance
+									开启 &nbsp; = &nbsp; 更平滑的外观（抗锯齿）<br>
+									关闭 &nbsp; = &nbsp; 更锐利 / 锯齿外观
 								</span></span>
-								Resize Smoothing
+								调整平滑大小
 							</legend>
 							<div>
 								<label for="eh-optOn" class="l-radio">
 									<input type="radio" id="eh-optOn" value="low" name="eh-optSmoothing" tabindex="1" checked="checked">
-									<span>On</span>
+									<span>开启</span>
 								</label>
 								<label for="eh-optOff" class="l-radio">
 									<input type="radio" id="eh-optOff" value="full" name="eh-optSmoothing" tabindex="2">
-									<span>Off</span>
+									<span>关闭</span>
 								</label>
 							</div>
 						</fieldset>
 						<fieldset>
 							<legend>
 								<span class="info">🛈<span class="tooltip">
-									Determines the colour mode used when creating the emblem.<br>
+									确定创建徽记时使用的颜色模式。<br>
 									<br>
-									Low &nbsp; = &nbsp; Reduced colour palette &nbsp; (smaller server request size)<br>
-									Full &nbsp; = &nbsp; The full colours from the source image &nbsp; (larger server request size)
+									低 &nbsp; = &nbsp; 减少的色表（较小的服务器请求大小）<br>
+									完全 &nbsp; = &nbsp; 源图像的全部色彩（较大的服务器请求大小）
 								</span></span>
-								Colour Mode
+								颜色模式
 							</legend>
 							<div>
 								<label for="eh-optLow" class="l-radio">
 									<input type="radio" id="eh-optLow" value="low" name="eh-optColour" tabindex="1">
-									<span>Low</span>
+									<span>低</span>
 								</label>
 								<label for="eh-optFull" class="l-radio">
 									<input type="radio" id="eh-optFull" value="full" name="eh-optColour" tabindex="2" checked="checked">
-									<span>Full</span>
+									<span>完全</span>
 								</label>
 							</div>
 						</fieldset>
 						<fieldset>
 							<legend>
 								<span class="info">🛈<span class="tooltip">
-									Determines the emblem creation method. Depending on the visual elements of the source image, either rows or columns will result in a smaller server request size.<br>
+									确定徽记创建方法。根据源映像的视觉元素，rows 或 columns 将导致较小的服务器请求大小。<br>
 									<br>
-									Auto &nbsp; = &nbsp; Horizontal & Vertical are calculated and the smallest is selected &nbsp; (slower)<br>
-									Rows &nbsp; = &nbsp; Horizontal<br>
-									Columns &nbsp; = &nbsp; Vertical<br>
+									Auto &nbsp; = &nbsp; 计算水平和垂直，并选择最小值（较慢）<br>
+									Rows &nbsp; = &nbsp; 水平<br>
+									Columns &nbsp; = &nbsp; 垂直<br>
 									<br>
-									The Auto option finds the best method each time but may take longer to process larger images on some computers.
+									“自动”选项每次都会找到最佳方法，但在某些计算机上处理较大的图像可能需要更长的时间。
 								</span></span>
-								SVG Creation Method
+								SVG 创建方法
 							</legend>
 							<div>
 								<label for="eh-optAuto" class="l-radio">
@@ -1128,32 +1128,32 @@
 						<fieldset>
 							<legend>
 								<span class="info">🛈<span class="tooltip">
-									Determines the amount of decimal places used for elements of the emblem SVG.<br>
+									确定用于徽记 SVG 元素的小数位数。<br>
 									<br>
-									Low &nbsp; = &nbsp; 3 &nbsp; (recommended)<br>
-									Medium &nbsp; = &nbsp; 4<br>
-									High &nbsp; = &nbsp; 5<br>
+									低 &nbsp; = &nbsp; 3（推荐）<br>
+									中 &nbsp; = &nbsp; 4<br>
+									高 &nbsp; = &nbsp; 5<br>
 									<br>
-									Only increase this setting if there is visible tearing in the emblem (lines present between the colours).
+									仅当徽记有明显撕裂（颜色之间出现线条）时才增加此设置。
 								</span></span>
-								Decimal Precision
+								小数精度
 							</legend>
 							<div>
 								<label for="eh-opt3" class="l-radio">
 									<input type="radio" id="eh-opt3" value="3" name="eh-optAccuracy" tabindex="3" checked="checked">
-									<span>Low</span>
+									<span>低</span>
 								</label>
 								<label for="eh-opt4" class="l-radio">
 									<input type="radio" id="eh-opt4" value="4" name="eh-optAccuracy" tabindex="4">
-									<span>Medium</span>
+									<span>中</span>
 								</label>
 								<label for="eh-opt5" class="l-radio">
 									<input type="radio" id="eh-opt5" value="5" name="eh-optAccuracy" tabindex="5">
-									<span>High</span>
+									<span>高</span>
 								</label>
 							</div>
 						</fieldset>
-						<button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">Create Emblem</button>
+						<button disabled id="eh-btnProcessImage" type="button" class="clr-inactive btn-wide">创建徽记</button>
 					</div>
 					
 				</div>
@@ -1180,7 +1180,7 @@
 					</div>
 					<div id="eh-divInfo" class="div-info clr-inactive">⠀</div>
 					<div class="div-support-link">
-						<a href="https://www.youtube.com/watch?v=bGI88KDaKmY" target="_blank">Help & Feedback</a>
+						<span style="color: #dee2e6;">原作者 Flashback-GTA →</span>&nbsp;<a href="https://www.youtube.com/watch?v=bGI88KDaKmY" target="_blank">帮助和反馈（YouTube）</a>
 					</div>
 				</div>
 			</div>
@@ -1188,13 +1188,13 @@
 			<!-- RIGHT COLUMN START -->
 			<div class="column right">
 				<div class="column-content">
-					<button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">Generate Code</button>
+					<button disabled id="eh-btnCreateCode" type="button" class="clr-inactive btn-wide">生成代码</button>
 					<textarea id="eh-txtConsoleCode" class="textarea"></textarea>
 					<div class="div-info div-mobile">
-						<strong>Note for mobile users:</strong><br>
-						Some mobile devices will not be able to copy all of the code. You may need to copy it in sections.
+						<strong>对移动用户的注意事项：</strong><br>
+						某些移动设备将无法复制所有代码。您可能需要分部分复制它。
 					</div>
-					<button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">Copy Code</button>
+					<button disabled id="eh-btnCopyCode" type="button" class="clr-inactive btn-wide">复制代码</button>
 				</div>
 			</div>
 			<!-- RIGHT COLUMN END -->
@@ -1216,13 +1216,13 @@
 
 				if (!FILE.type)
 				{
-					STATUS.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
+					STATUS.textContent = '错误：此浏览器似乎不支持 File.type 属性。';
 					return;
 				}
 
 				if (!FILE.type.match('image.*'))
 				{
-					STATUS.textContent = 'Error: Image format not recognized!'
+					STATUS.textContent = '错误：无法识别图像格式！'
 					return;
 				}
 
